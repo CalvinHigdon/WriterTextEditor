@@ -48,24 +48,54 @@ class Window(QtWidgets.QWidget):
 
 
         self.textBox.textChanged.connect(self.on_text_changed)
+        self.textBox.selectionChanged.connect(self.on_selection_changed)
+
+        self.randomboolean = True
                 
     def on_text_changed(self):
         # if hasattr(self, 'th') and self.th.is_alive():
         #     self.join()
         self.th = threading.Thread(target=self.update_text)
         self.th.start()
+        self.randomboolean = False
+
+    def on_selection_changed(self):
+        if (self.randomboolean):
+            return
+        print("\nSelection changed")
+        cursor = self.textBox.textCursor()
+        print("Cursor at:" + str(cursor.positionInBlock()))
+        line = cursor.block().text()
+        print("Line: " + line[:cursor.positionInBlock()] + "|" + line[cursor.positionInBlock():])
+
+        match1 = re.findall(r'\b\w+', line[:cursor.positionInBlock()])
+        match2 = re.search(r'\w+\b', line[cursor.positionInBlock():])
+        print("Match1: " + str(match1))
+        print("Match2: " + str(match2))
+
+        match = str(re.findall(r'\b\w+', line[:cursor.positionInBlock()])[-1])
+        match += str(re.search(r'\w+\b', line[cursor.positionInBlock():]).group(0))
+
+        print("Match: " + str(match))
+
+        # print("Match Later: " + str(matchLater))
+        # print("Match Earlier: " + str(matchEarlier))
+        
     
-    def update_text(self):
-        cleanText = re.sub(r'[^\w\sa-z]', '', self.textBox.toPlainText().lower())
-        mostRecent = cleanText.split()[-1]
+    def update_text(self, word=None):
+        if word:
+            mostRecent = word
+        else:
+            cleanText = re.sub(r'[^\w\sa-z]', '', self.textBox.textCursor().block().text().lower())
+            mostRecent = cleanText.split()[-1]
+
         print("Requesting rhymes for:", mostRecent)
         parameter = {'rel_rhy': mostRecent}
         response = requests.get('https://api.datamuse.com/words', parameter)
         rhymes = response.json()
         rhymes = [word['word'] for word in rhymes]
         self.displayText.setText('\n'.join(rhymes))
-        # print number of active threads
-        print(threading.active_count())
+        
 
 
 
