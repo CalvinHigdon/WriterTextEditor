@@ -7,6 +7,8 @@ import regex as re
 import sys
 
 class QMainWindow(QMainWindow):
+    
+
     def __init__(self):
         super().__init__()
         font = QtGui.QFont() 
@@ -24,12 +26,16 @@ class QMainWindow(QMainWindow):
         self.toolBar = QToolBar()
         self.toolBar.setMovable(False)
 
+        saveButton = QtGui.QAction("Save", self, triggered=self.save_text)
+
         self.toolBar.addAction("New")
         self.toolBar.addAction("Open")
         self.toolBar.addAction("Save")
         self.toolBar.addAction("Print")
         self.toolBar.addAction("Undo")
         self.toolBar.addAction("Redo")
+
+        self.toolBar.addAction(saveButton)
 
         self.addToolBar(Qt.ToolBarArea.TopToolBarArea, self.toolBar)
 
@@ -106,9 +112,16 @@ class QMainWindow(QMainWindow):
         rhymes = [word['word'] for word in rhymes]
         if len(rhymes) != 0:
             self.displayText.setText('\n'.join(rhymes))
-        
 
-
+    def save_text(self):
+        fileName = QFileDialog.getSaveFileName(self, "Save File", "filename", "Text Files (*.txt)")
+        print(fileName)
+        if fileName[0]:
+            # if not fileName[0].endswith('.txt'):
+            #     fileName = (fileName[0] + '.txt', fileName[1])
+            with open(fileName[0], 'w') as file:
+                file.write(self.textBox.toPlainText())
+            
 
 if __name__ == '__main__':
     # sys.argv contains the list of command-line arguments passed to a Python script
