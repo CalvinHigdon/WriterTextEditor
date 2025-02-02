@@ -5,10 +5,9 @@ import threading
 import requests
 import regex as re
 import sys
+from document import Document
 
 class QMainWindow(QMainWindow):
-    
-
     def __init__(self):
         super().__init__()
         font = QtGui.QFont() 
@@ -23,22 +22,14 @@ class QMainWindow(QMainWindow):
         leftLayout = QVBoxLayout()
         layout = QHBoxLayout()
 
-        self.toolBar = QToolBar()
-        self.toolBar.setMovable(False)
+        # self.toolBar = QToolBar()
+        # self.toolBar.setMovable(False)
+        # self.addToolBar(Qt.ToolBarArea.TopToolBarArea, self.toolBar)
 
-        saveButton = QtGui.QAction("Save", self, triggered=self.save_text)
+        self.create_actions()
+        self.create_menus()
 
-        self.toolBar.addAction("New")
-        self.toolBar.addAction("Open")
-        self.toolBar.addAction("Save")
-        self.toolBar.addAction("Print")
-        self.toolBar.addAction("Undo")
-        self.toolBar.addAction("Redo")
-
-        self.toolBar.addAction(saveButton)
-
-        self.addToolBar(Qt.ToolBarArea.TopToolBarArea, self.toolBar)
-
+        self.document = Document()
 
         self.textBox = QTextEdit()
         self.textBox.setFont(font)
@@ -72,29 +63,34 @@ class QMainWindow(QMainWindow):
 
         self.textBox.textChanged.connect(self.on_text_changed)
         self.textBox.selectionChanged.connect(self.on_selection_changed)
+
+    def create_actions(self):
+        self.openAction = QtGui.QAction("Open", self)
+        self.openAction.triggered.connect(self.open_file)
+        self.saveAction = QtGui.QAction("Save", self)
+        self.saveAction.triggered.connect(self.save)
+        self.saveAsAction = QtGui.QAction("Save As", self)
+        self.saveAsAction.triggered.connect(self.save_as)
+
+    def create_menus(self):
+        self.fileMenu = self.menuBar().addMenu("File")
+        self.fileMenu.addAction(self.openAction)
+        self.fileMenu.addAction(self.saveAction)
+        self.fileMenu.addAction(self.saveAsAction)
                 
     def on_text_changed(self):
-        # if hasattr(self, 'th') and self.th.is_alive():
-        #     self.join()
         self.th = threading.Thread(target=self.update_text)
         self.th.start()
 
     def on_selection_changed(self):
-        print("\nSelection changed")
         cursor = self.textBox.textCursor()
-        print("Cursor at:" + str(cursor.positionInBlock()))
         line = cursor.block().text()
-        print("Line: " + line[:cursor.positionInBlock()] + "|" + line[cursor.positionInBlock():])
 
         match1 = re.match(r'[\S]+', line[:cursor.positionInBlock()], flags=re.RegexFlag.REVERSE)
         match2 = re.match(r'[\S]+', line[cursor.positionInBlock():])
         match1 = match1.group(0) if match1 else ""
         match2 = match2.group(0) if match2 else ""
-        print("Match1: " + str(match1))
-        print("Match2: " + str(match2))
         match = re.sub(r'[^\w\sa-z]', '', match1 + match2)
-        print("Match: " + str(match))
-
         if match:
             self.update_text(match)
     
@@ -112,15 +108,33 @@ class QMainWindow(QMainWindow):
         rhymes = [word['word'] for word in rhymes]
         if len(rhymes) != 0:
             self.displayText.setText('\n'.join(rhymes))
+        else:
+            if not self.displayText.text():
+                self.displayText.setText("No rhymes found for " + mostRecent)
 
-    def save_text(self):
+    def open_file(self):
+        fileName = QFileDialog.getOpenFileName(self, "Open File", "", "Text Files (*.txt)")
+        if fileName[0]:
+            with open(fileName[0], 'r') as file:
+                self.document.load(fileName[0])
+                self.textBox.setText(self.document.content)
+    
+    def save(self):
+        self.document.content = self.textBox.toPlainText()
+        self.document.updateModified()
+        if self.document.file_name:
+            self.document.save(self.document.file_name)
+        else:
+            self.save_as()
+
+    def save_as(self):
+        self.document.content = self.textBox.toPlainText()
+        self.document.updateModified()
         fileName = QFileDialog.getSaveFileName(self, "Save File", "filename", "Text Files (*.txt)")
         print(fileName)
         if fileName[0]:
-            # if not fileName[0].endswith('.txt'):
-            #     fileName = (fileName[0] + '.txt', fileName[1])
-            with open(fileName[0], 'w') as file:
-                file.write(self.textBox.toPlainText())
+            self.document.save(fileName[0])
+            self.document.file_name = fileName[0]
             
 
 if __name__ == '__main__':
