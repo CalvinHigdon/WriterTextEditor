@@ -1,0 +1,249 @@
+
+--- FOR THE NEXT : 0 a
+Word: aardvark
+--- KILLED : 13 aardvark
+--- APPEND Prune Array: 13 aardvark
+--- FOR THE NEXT : 13 aardvark
+Word: arc
+--- KILLED : 18568 arc
+--- APPEND Prune Array: 18568 arc
+--- FOR THE NEXT : 18568 arc
+Word: arche
+--- KILLED : 18752 arche
+--- APPEND Prune Array: 18752 arche
+--- FOR THE NEXT : 18752 arche
+Word: ark
+--- KILLED : 19758 ark
+--- APPEND Prune Array: 19758 ark
+--- FOR THE NEXT : 19758 ark
+Word: ballpark
+--- KILLED : 26986 ballpark
+--- APPEND Prune Array: 26986 ballpark
+--- FOR THE NEXT : 26986 ballpark
+Word: barch
+--- KILLED : 27796 barchan
+--- FOR THE NEXT : 27796 barchan
+Word: bark
+--- KILLED : 27959 bark
+--- APPEND Prune Array: 27959 bark
+--- FOR THE NEXT : 27959 bark
+Word: barke
+--- KILLED : 27965 barked
+--- FOR THE NEXT : 27965 barked
+Word: barque
+--- KILLED : 28176 barque
+--- APPEND Prune Array: 28176 barque
+--- FOR THE NEXT : 28176 barque
+Word: benchmark
+--- KILLED : 31465 benchmark
+--- APPEND Prune Array: 31465 benchmark
+--- FOR THE NEXT : 31465 benchmark
+Word: birthmark
+--- KILLED : 34814 birthmark
+--- APPEND Prune Array: 34814 birthmark
+--- FOR THE NEXT : 34814 birthmark
+Word: bismarck
+--- KILLED : 34938 bismarck
+--- APPEND Prune Array: 34938 bismarck
+--- FOR THE NEXT : 34938 bismarck
+Word: bismark
+--- KILLED : 34942 bismark
+--- APPEND Prune Array: 34942 bismark
+--- FOR THE NEXT : 34942 bismark
+Word: bsarch
+--- KILLED : 41750 bsf
+--- FOR THE NEXT : 41750 bsf
+Word: chark
+--- KILLED : 52848 chark
+--- APPEND Prune Array: 52848 chark
+--- FOR THE NEXT : 52848 chark
+Word: clark
+--- KILLED : 58262 clark
+--- APPEND Prune Array: 58262 clark
+--- FOR THE NEXT : 58262 clark
+Word: clarke
+--- KILLED : 58263 clarke
+--- APPEND Prune Array: 58263 clarke
+--- FOR THE NEXT : 58263 clarke
+Word: dark
+--- KILLED : 76866 dark
+--- APPEND Prune Array: 76866 dark
+--- FOR THE NEXT : 76866 dark
+Word: darke
+--- KILLED : 76867 darked
+--- FOR THE NEXT : 76867 darked
+Word: demark
+--- KILLED : 80375 demark
+--- APPEND Prune Array: 80375 demark
+--- FOR THE NEXT : 80375 demark
+Word: denmark
+--- KILLED : 81147 denmark
+--- APPEND Prune Array: 81147 denmark
+--- FOR THE NEXT : 81147 denmark
+Word: disembark
+--- KILLED : 87672 disembark
+--- APPEND Prune Array: 87672 disembark
+--- FOR THE NEXT : 87672 disembark
+Word: earmark
+--- KILLED : 94759 earmark
+--- APPEND Prune Array: 94759 earmark
+--- FOR THE NEXT : 94759 earmark
+Word: embark
+--- KILLED : 97839 embark
+--- APPEND Prune Array: 97839 embark
+--- FOR THE NEXT : 97839 embark
+Word: garch
+--- KILLED : 122063 garcinia
+--- FOR THE NEXT : 122063 garcinia
+Word: goldmark
+--- KILLED : 127144 goldminer
+--- FOR THE NEXT : 127144 goldminer
+Word: hallmark
+--- KILLED : 132658 hallmark
+--- APPEND Prune Array: 132658 hallmark
+--- FOR THE NEXT : 132658 hallmark
+Word: harc
+--- KILLED : 133552 hard
+--- FOR THE NEXT : 133552 hard
+Word: hark
+--- KILLED : 133707 hark
+--- APPEND Prune Array: 133707 hark
+--- FOR THE NEXT : 133707 hark
+Word: hashmark
+--- KILLED : 134018 hasht
+--- FOR THE NEXT : 134018 hasht
+Word: karch
+--- KILLED : 162018 karch
+--- APPEND Prune Array: 162018 karch
+--- FOR THE NEXT : 162018 karch
+Word: landmark
+--- KILLED : 166798 landmark
+--- APPEND Prune Array: 166798 landmark
+--- FOR THE NEXT : 166798 landmark
+Word: lark
+--- KILLED : 167359 lark
+--- APPEND Prune Array: 167359 lark
+--- FOR THE NEXT : 167359 lark
+Word: lexmark
+--- KILLED : 170218 lexological
+--- FOR THE NEXT : 170218 lexological
+Word: marc
+--- KILLED : 178638 marc
+--- APPEND Prune Array: 178638 marc
+--- FOR THE NEXT : 178638 marc
+Word: mark
+--- KILLED : 178907 mark
+--- APPEND Prune Array: 178907 mark
+--- FOR THE NEXT : 178907 mark
+Word: marke
+--- KILLED : 178915 markeb
+--- FOR THE NEXT : 178915 markeb
+Word: marque
+--- KILLED : 179068 marque
+--- APPEND Prune Array: 179068 marque
+--- FOR THE NEXT : 179068 marque
+Word: matriarch
+--- KILLED : 179983 matriarch
+--- APPEND Prune Array: 179983 matriarch
+--- FOR THE NEXT : 179983 matriarch
+Word: meadowlark
+--- KILLED : 180540 meadowlark
+--- APPEND Prune Array: 180540 meadowlark
+--- FOR THE NEXT : 180540 meadowlark
+Word: merc
+--- KILLED : 182462 merc
+--- APPEND Prune Array: 182462 merc
+--- FOR THE NEXT : 182462 merc
+Word: monarch
+--- KILLED : 189691 monarch
+--- APPEND Prune Array: 189691 monarch
+--- FOR THE NEXT : 189691 monarch
+Word: narc
+--- KILLED : 195764 narc
+--- APPEND Prune Array: 195764 narc
+--- FOR THE NEXT : 195764 narc
+Word: oligarch
+--- KILLED : 210972 oligarch
+--- APPEND Prune Array: 210972 oligarch
+--- FOR THE NEXT : 210972 oligarch
+Word: ozark
+--- KILLED : 221347 ozark
+--- APPEND Prune Array: 221347 ozark
+--- FOR THE NEXT : 221347 ozark
+Word: parc
+--- KILLED : 225045 parc
+--- APPEND Prune Array: 225045 parc
+--- FOR THE NEXT : 225045 parc
+Word: park
+--- KILLED : 225359 park
+--- APPEND Prune Array: 225359 park
+--- FOR THE NEXT : 225359 park
+Word: parke
+--- KILLED : 225362 parked
+--- FOR THE NEXT : 225362 parked
+Word: patriarch
+--- KILLED : 226650 patriarch
+--- APPEND Prune Array: 226650 patriarch
+--- FOR THE NEXT : 226650 patriarch
+Word: pockmark
+--- KILLED : 239092 pockmark
+--- APPEND Prune Array: 239092 pockmark
+--- FOR THE NEXT : 239092 pockmark
+Word: postmark
+--- KILLED : 242404 postmark
+--- APPEND Prune Array: 242404 postmark
+--- FOR THE NEXT : 242404 postmark
+Word: quark
+--- KILLED : 256830 quark
+--- APPEND Prune Array: 256830 quark
+--- FOR THE NEXT : 256830 quark
+Word: remark
+--- KILLED : 265995 remark
+--- APPEND Prune Array: 265995 remark
+--- FOR THE NEXT : 265995 remark
+Word: saarc
+--- KILLED : 274838 sab
+--- FOR THE NEXT : 274838 sab
+Word: sark
+--- KILLED : 277326 sark
+--- APPEND Prune Array: 277326 sark
+--- FOR THE NEXT : 277326 sark
+Word: skylark
+--- KILLED : 291055 skylark
+--- APPEND Prune Array: 291055 skylark
+--- FOR THE NEXT : 291055 skylark
+Word: snark
+--- KILLED : 292926 snark
+--- APPEND Prune Array: 292926 snark
+--- FOR THE NEXT : 292926 snark
+Word: sparc
+--- KILLED : 295980 sparch
+--- FOR THE NEXT : 295980 sparch
+Word: spark
+--- KILLED : 296015 spark
+--- APPEND Prune Array: 296015 spark
+--- FOR THE NEXT : 296015 spark
+Word: starc
+--- KILLED : 300421 starch
+--- FOR THE NEXT : 300421 starch
+Word: starck
+--- KILLED : 300446 starcraft
+--- FOR THE NEXT : 300446 starcraft
+Word: stark
+--- KILLED : 300472 stark
+--- APPEND Prune Array: 300472 stark
+--- FOR THE NEXT : 300472 stark
+Word: starke
+--- KILLED : 300473 starken
+--- FOR THE NEXT : 300473 starken
+Word: trademark
+--- KILLED : 325701 trademark
+--- APPEND Prune Array: 325701 trademark
+--- FOR THE NEXT : 325701 trademark
+Word: watermark
+--- KILLED : 362003 watermark
+--- APPEND Prune Array: 362003 watermark
+--- FOR THE NEXT : 362003 watermark
+Word: yarke
+--- KILLED : 367845 yarke
+--- APPEND Prune Array: 367845 yarke

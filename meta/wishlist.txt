@@ -1,0 +1,7 @@
+Wants for Top Right Header:
+"Return rhymes for <WORD> filtered by [ONE] sorted by [TWO]:"
+[ONE]: All, Nouns, Adjectives, Verbs, Prepositions, Articles
+[TWO]: Default, Alphabetical, Best Rhyme
+
+Wants for bottom left:
+Right click to switch between dictionary and thesaurus
