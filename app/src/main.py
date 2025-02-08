@@ -166,19 +166,22 @@ class QMainWindow(QMainWindow):
                 self.displayText.setText("No rhymes found for " + mostRecent)
 
     def disp_result(self):
+        print("disp result triggered with sort: " + self.sortByComboBox.currentText())
         # rhymes.sort( key=lambda x: x['word'], reverse=False)
         # pprint(self.wordList)
+        self.wordList = self.get_words(self.wordList)
         if self.sortByComboBox.currentText() == "SCORE":
             self.wordList.sort(key=lambda x: x['score'])
         elif self.sortByComboBox.currentText() == "ALPHABETICAL":
             self.wordList.sort(key=lambda x: x['word'])
         elif self.sortByComboBox.currentText() == "SYLLABLES":
             self.wordList.sort(key=lambda x: x['numSyllables'])
-        self.displayText.setText('\n'.join(self.get_words(self.wordList)))
+        print(self.wordList)
+        self.displayText.setText('\n'.join([x['word'] for x in self.wordList]))
         return self.get_words(self.wordList)
     
     def get_words(self, response):
-        return self.wordTools.get_intersection([word['word'] for word in response])
+        return self.wordTools.get_intersection(response)
         # return [word['word'] for word in response]
 
     def new_file(self):
